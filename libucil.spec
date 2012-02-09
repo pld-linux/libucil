@@ -6,20 +6,24 @@ Summary:	Unicap Imaging Library - simple image processing functions
 Summary(pl.UTF-8):	Unicap Imaging Library - biblioteka prostych funkcji przetwarzania obrazu
 Name:		libucil
 Version:	0.9.10
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: http://unicap-imaging.org/download.htm
 Source0:	http://unicap-imaging.org/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	986adfd387d64726acd0267565ff9431
+Patch0:		%{name}-ac.patch
 URL:		http://unicap-imaging.org/
 BuildRequires:	alsa-lib-devel >= 0.9
+BuildRequires:	autoconf
+BuildRequires:	automake
 %{?with_ffmpeg:BuildRequires:	ffmpeg-devel >= ? < ?}
 BuildRequires:	glib2-devel >= 1:2.11.0
 BuildRequires:	gstreamer-devel >= 0.10
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10
 BuildRequires:	gtk-doc >= 1.4
 BuildRequires:	libpng-devel
+BuildRequires:	libtool
 BuildRequires:	libtheora-devel
 BuildRequires:	libunicap-devel
 BuildRequires:	libvorbis-devel
@@ -83,11 +87,18 @@ Dokumentacja API biblioteki ucil.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 # --enable-gpl allows to use some GPL gstreamer modules
 # (doesn't affect libucil license, as it's GPLed anyway)
 %{?with_ffmpeg:CPPFLAGS="%{rpmcppflags} -I/usr/include/libavcodec -I/usr/include/libavutil"}
+%{__gettextize}
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--enable-gpl \
 	%{?with_ffmpeg:--enable-ucil-avcodec} \
