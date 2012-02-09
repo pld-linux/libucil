@@ -1,0 +1,11 @@
+--- libucil-0.9.10/configure.ac~	2010-08-31 08:52:31.000000000 +0200
++++ libucil-0.9.10/configure.ac	2012-02-09 18:34:02.832816354 +0100
+@@ -236,7 +236,7 @@
+ 		    gpl=false ;;
+ 		*) AC_MSG_ERROR([bad value ${enableval} for --enable-gpl]) ;;
+ 	      esac],[gpl=false])
+-AM_CONDITIONAL([ALLOW_GPL], [text x$gpl = xtrue])
++AM_CONDITIONAL([ALLOW_GPL], [test x$gpl = xtrue])
+ 
+ 
+ 
