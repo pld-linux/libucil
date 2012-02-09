@@ -15,9 +15,10 @@ Source0:	http://unicap-imaging.org/downloads/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac.patch
 URL:		http://unicap-imaging.org/
 BuildRequires:	alsa-lib-devel >= 0.9
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 %{?with_ffmpeg:BuildRequires:	ffmpeg-devel >= ? < ?}
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.11.0
 BuildRequires:	gstreamer-devel >= 0.10
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10
