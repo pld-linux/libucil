@@ -6,7 +6,7 @@ Summary:	Unicap Imaging Library - simple image processing functions
 Summary(pl.UTF-8):	Unicap Imaging Library - biblioteka prostych funkcji przetwarzania obrazu
 Name:		libucil
 Version:	0.9.10
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: http://unicap-imaging.org/download.htm
