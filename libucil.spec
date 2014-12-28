@@ -18,7 +18,7 @@ BuildRequires:	alsa-lib-devel >= 0.9
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 %{?with_ffmpeg:BuildRequires:	ffmpeg-devel >= ? < ?}
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.11.0
 BuildRequires:	gstreamer-devel >= 0.10
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10
