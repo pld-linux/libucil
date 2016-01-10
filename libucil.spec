@@ -1,12 +1,12 @@
 #
 # Conditional build:
 %bcond_with	ffmpeg	# avcodec support (needs some unidentified ffmpeg version)
-#
+
 Summary:	Unicap Imaging Library - simple image processing functions
 Summary(pl.UTF-8):	Unicap Imaging Library - biblioteka prostych funkcji przetwarzania obrazu
 Name:		libucil
 Version:	0.9.10
-Release:	7
+Release:	8
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: http://unicap-imaging.org/download.htm
@@ -24,8 +24,8 @@ BuildRequires:	gstreamer-devel >= 0.10
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10
 BuildRequires:	gtk-doc >= 1.4
 BuildRequires:	libpng-devel
-BuildRequires:	libtool
 BuildRequires:	libtheora-devel
+BuildRequires:	libtool
 BuildRequires:	libunicap-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	pango-devel
@@ -79,6 +79,9 @@ Summary:	ucil API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki ucil
 Group:		Documentation
 Requires:	gtk-doc-common
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for ucil library.
