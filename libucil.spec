@@ -6,7 +6,7 @@ Summary:	Unicap Imaging Library - simple image processing functions
 Summary(pl.UTF-8):	Unicap Imaging Library - biblioteka prostych funkcji przetwarzania obrazu
 Name:		libucil
 Version:	0.9.10
-Release:	10
+Release:	11
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: http://unicap-imaging.org/download.htm
@@ -115,6 +115,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libucil.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -130,7 +133,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libucil.so
-%{_libdir}/libucil.la
 %{_includedir}/unicap/ucil*.h
 %{_pkgconfigdir}/libucil.pc
 
