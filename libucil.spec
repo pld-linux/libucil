@@ -79,9 +79,7 @@ Summary:	ucil API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki ucil
 Group:		Documentation
 Requires:	gtk-doc-common
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for ucil library.
