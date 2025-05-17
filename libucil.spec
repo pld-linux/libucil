@@ -89,7 +89,7 @@ Dokumentacja API biblioteki ucil.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 # --enable-gpl allows to use some GPL gstreamer modules
