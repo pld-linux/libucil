@@ -9,11 +9,11 @@ Version:	0.9.10
 Release:	11
 License:	GPL v2+
 Group:		Libraries
-#Source0Download: http://unicap-imaging.org/download.htm
-Source0:	http://unicap-imaging.org/downloads/%{name}-%{version}.tar.gz
+# formerly at https://unicap-imaging.org/download.htm
+Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	986adfd387d64726acd0267565ff9431
 Patch0:		%{name}-ac.patch
-URL:		http://unicap-imaging.org/
+URL:		https://unicap-imaging.org/
 BuildRequires:	alsa-lib-devel >= 0.9
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
