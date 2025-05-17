@@ -30,6 +30,7 @@ BuildRequires:	libunicap-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	pango-devel
 BuildRequires:	pkgconfig
+BuildRequires:	rpm-build >= 4.6
 Requires:	glib2 >= 1:2.11.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
