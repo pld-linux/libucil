@@ -1,0 +1,10 @@
+--- libucil-0.9.10/src/ucil_ppm.c.orig	2010-04-08 15:47:26.000000000 +0200
++++ libucil-0.9.10/src/ucil_ppm.c	2025-11-26 13:55:42.292120967 +0100
+@@ -8,6 +8,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <string.h>
++#include <ctype.h>
+ 
+ 
+ int nextval( int fd )

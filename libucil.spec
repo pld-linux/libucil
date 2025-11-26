@@ -13,6 +13,7 @@ Group:		Libraries
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	986adfd387d64726acd0267565ff9431
 Patch0:		%{name}-ac.patch
+Patch1:		includes.patch
 URL:		https://unicap-imaging.org/
 BuildRequires:	alsa-lib-devel >= 0.9
 BuildRequires:	autoconf >= 2.59
@@ -91,6 +92,7 @@ Dokumentacja API biblioteki ucil.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 # --enable-gpl allows to use some GPL gstreamer modules
